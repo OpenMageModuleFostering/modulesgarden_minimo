@@ -1,7 +1,7 @@
 <?php 
-if (Mage::helper('core')->isModuleEnabled('Modulesgarden_SPSSliders')){
-    $slider = Mage::getModel('storepluginsetsliders/slider')->loadByCode('minimo_slider_full');
-    $slider2 = Mage::getModel('storepluginsetsliders/slider')->loadByCode('minimo_slider_wrapped');
+if (Mage::helper('core')->isModuleEnabled('Modulesgarden_Base')){
+    $slider = Mage::getModel('modulesgarden_base/slider')->loadByCode('minimo_slider_full');
+    $slider2 = Mage::getModel('modulesgarden_base/slider')->loadByCode('minimo_slider_wrapped');
     
     $style = Mage::getStoreConfig('mgthememinimo/main/colorslider');
     if ( $style == 'blue'){
