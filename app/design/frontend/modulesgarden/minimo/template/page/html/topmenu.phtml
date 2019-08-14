@@ -1,0 +1,96 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Top menu for store
+ *
+ * @see Mage_Page_Block_Html_Topmenu
+ */
+?>
+<div id="mainNav" class="menu">
+    <?php $_menu = $this->getHtml('level-top') ?>
+    <?php if($_menu): ?>
+    <div class="nav-container">
+        <div class="menu_search_wrapp clearfix">
+            <ul id="mega-menu-1" class="mega-menu">
+                <?php $homeLink = Mage::getStoreConfig('mgthememinimo/main/showhome'); ?>
+                <?php if ($homeLink): ?>
+                    <?php if ($homeLink == "yes"): ?>
+                        <li class="level0 nav-1 first home-link level-top"><a class="level-top" href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK); ?>">Home</a></li>
+                    <?php elseif($homeLink == "no"): ?>
+                        <!-- do nothing -->
+                    <?php endif ?>
+                <?php else: ?>
+                        <!-- do nothing -->
+                <?php endif ?>
+
+                <?php echo $_menu ?>
+
+            <?php endif ?>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="menu_mobile_click" class="clearfix">
+    <div class="menu_icon"><i class="fa fa-bars"></i></div>
+    <div class="search_icon"><i class="fa fa-search"></i></div>
+    <div class="search_mobile">
+        <?php $catalogSearchHelper =  $this->helper('catalogsearch'); ?>
+        <form id="search_mini_form" action="<?php echo $catalogSearchHelper->getResultUrl() ?>" method="get">
+            <div class="form-search">
+                <input id="search" type="text" name="<?php echo $catalogSearchHelper->getQueryParamName() ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" class="input-text" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" />
+                <button type="submit" title="<?php echo $this->__('Search') ?>" class="search-button"><i class="fa fa-chevron-right"></i></button>
+                <div id="search_autocomplete" class="search-autocomplete"></div>
+                <script type="text/javascript">
+                //<![CDATA[
+                    var searchForm = new Varien.searchForm('search_mini_form', 'search', '');
+                    searchForm.initAutocomplete('<?php echo $catalogSearchHelper->getSuggestUrl() ?>', 'search_autocomplete');
+                //]]>
+                </script>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="menu_mobile">
+    <?php if($_menu): ?>
+        <div class="nav-container">
+            <div class="menu_search_wrapp">
+
+                    <ul id="nav">
+                        <?php  echo $_menu; ?>
+
+                        <?php endif ?>
+
+                    </ul>
+            </div>
+        </div>
+</div>

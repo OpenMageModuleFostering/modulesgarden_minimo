@@ -1,0 +1,15 @@
+<?php 
+    $baner1 = (int) Mage::getModel('cms/block')->load('minimo-baner-1')->getIsActive();
+    $baner2 = (int) Mage::getModel('cms/block')->load('minimo-baner-2')->getIsActive();
+    $baner3 = (int) Mage::getModel('cms/block')->load('minimo-baner-3')->getIsActive();
+?>
+
+<?php if($baner1 && $baner2 && $baner3) { ?>
+<div class="newBanerList-container">
+    <ul class="banersList clearfix">
+        <li><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('minimo-baner-1')->toHtml() ?></li>
+        <li><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('minimo-baner-2')->toHtml() ?></li>
+        <li><?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('minimo-baner-3')->toHtml() ?></li>
+    </ul>
+</div>
+<?php } ?>

@@ -1,0 +1,13 @@
+<div id="<?php $version = Mage::getStoreConfig('mgthememinimo/main/colorscheme');
+    if ( $version == 'green'){
+        echo 'green-color';
+    }else {
+        echo 'default-color';
+    } 
+    ?>" class="category-img">
+    <div class="clearfix top-wrapper">
+        <?php $category = Mage::registry('current_category'); ?>
+        <h3><?php echo $category->getName(); ?></h3>
+        <span><?php echo $category->getDescription(); ?></span>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+
+<?php
+    if (Mage::helper('core')->isModuleEnabled('Modulesgarden_SPSSliders')){
+        $slider = Mage::getModel('storepluginsetsliders/slider')->loadByCode('minimo_brands');
+        if (!$slider->isEmpty() && $slider->getEnabled() && $slider->isEnabledForCurrentStoreView()){
+?>
+    <section class="brands">
+        <div class="page-title catalog_title"><h2><?php echo $this->__('Brands') ?></h2></div> 
+        <div class="customNavigation">
+            <a class="btn prev prev-brands"></a>
+            <a class="btn next next-brands"></a>
+        </div>
+        <div id="owl-brands" class="owl-carousel-brands owl-carousel owl-theme">
+            <?php
+                foreach ($slider->getEnabledBanners() as $banner){
+                    echo "<div class='item'><img src='".$banner->getFileUrl()."'/></div>";
+                        }
+                    }
+            ?>
+        </div>
+    </section>
+    <?php } ?>

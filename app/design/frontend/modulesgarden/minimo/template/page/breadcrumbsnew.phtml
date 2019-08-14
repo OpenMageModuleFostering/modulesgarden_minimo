@@ -1,0 +1,7 @@
+<div class="category-bar">
+    <div class="top-wrapper clearfix">
+        <?php $category = Mage::registry('current_category'); ?>
+        <h2 class="category-name-bar"><?php echo $category->getName() ?></h2>
+        <?php echo $this->getChildHtml('breadcrumbs') ?>
+    </div>
+</div>

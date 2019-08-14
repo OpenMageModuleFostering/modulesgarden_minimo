@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Modulesgarden_Minimo",
+    "type": "magento-module",
+    "license": "OSL",
+    "homepage": "",
+    "description": "SUmmary",
+    "authors": [
+    {
+        "name": "ModulesGarden",
+        "email": "peter@inbsgroup.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

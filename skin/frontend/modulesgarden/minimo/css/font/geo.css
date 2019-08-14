@@ -1,0 +1,32 @@
+/* ============ STYLES FOR THEME FONT - GEO =============== */
+body { font-family: 'Ubuntu', sans-serif; font-weight:300; font-size:12px; }
+.page-title h1, .catalog-title h1 { font-family: 'Ubuntu', sans-serif; font-weight:400; font-size:16px; }
+button.button span { font-family: 'Ubuntu', sans-serif; font-weight:400; font-size:12px; }
+.page-title h2 { font-family: 'GeogrotesqueSemiBold', sans-serif; font-size:23px; font-smooth: always; }
+.products-grid .link-compare { font-family: 'Ubuntu', sans-serif; font-weight:400; font-size:12px; }
+#nav a.level-top { font-family: 'Ubuntu', sans-serif; font-weight:300; font-size:16px; }
+.products-grid .product-name a { font-family: 'GeogrotesqueSemiBold', sans-serif; font-weight:normal; font-size:20px; font-smooth: always; }
+.regular-price .price { font-family: 'Ubuntu', sans-serif; font-weight:500; font-size:20px; }
+cart .shipping h2 { font-family: 'Ubuntu', sans-serif; font-weight:400; }
+.opc .step-title .number { font-family: 'Ubuntu', sans-serif; font-weight:400; }
+.opc .step-title h2 { font-family: 'Ubuntu', sans-serif; font-weight:400; font-size: 16px; }
+.view_more { font-family: 'Ubuntu', sans-serif; font-weight:400; font-size:16px; }
+.catblocks li span { font-family: 'Ubuntu', sans-serif; font-weight:400; font-size:14px; }
+.catlandingbottomPromoblock { font-family: 'Ubuntu', sans-serif !important; font-weight:400; font-size:14px; }
+.cart-span { font-family: 'Ubuntu', sans-serif; font-weight:400; font-size:16px; padding-left:8px; }
+
+input,select,textarea,button { font-family: 'Ubuntu', sans-serif; font-weight:400; font-size:12px; }
+button { font-family: 'GeogrotesqueSemiBold', sans-serif; font-size:12px; font-weight:normal; font-smooth: always; }
+.block-currency .block-title strong { font-family: 'Ubuntu', sans-serif; font-weight:400; font-size:13px; }
+.new-product { font-family: 'Ubuntu', sans-serif; font-weight:500; font-size:15px; text-transform:uppercase; }
+.col-footer ul li { color:#333; font-family: 'Ubuntu', sans-serif; font-weight:500; font-size:14px; }
+.col-footer h2, .col-footer .block-title span { width:100%; display:block; color:#333 !important; font-family: 'GeogrotesqueSemiBold', sans-serif; 
+    font-size:20px !important; font-weight:normal; text-align:left; border-bottom:1px #e3e1e1 solid; padding-bottom:14px; text-transform:uppercase; font-smooth: always; }
+.header .links a { font-family: 'Ubuntu', sans-serif; font-weight:400;  font-size:11px; color:#333; }
+.category-img h3 { font-family: 'GeogrotesqueSemiBold', sans-serif; font-smooth: always; }
+.category-img span {  font-family: 'GeogrotesqueRegular', sans-serif; font-smooth: always; }
+.category-bar { font-size:24px; font-family:'GeogrotesqueSemiBold', sans-serif; font-smooth: always; }
+.breadcrumbs li a, .breadcrumbs li span { font-family: 'Ubuntu', sans-serif; font-weight:400; }
+.sorter .sort-by label { font-family: 'Ubuntu', sans-serif; font-weight:400; }
+.button_green { font-family: 'GeogrotesqueSemiBold', sans-serif; font-weight:normal; font-smooth: always; }
+#mega-menu-1 li a.level-top { font-family: 'GeogrotesqueRegular', sans-serif; }

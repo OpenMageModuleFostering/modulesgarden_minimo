@@ -1,0 +1,93 @@
+<?php 
+if (Mage::helper('core')->isModuleEnabled('Modulesgarden_SPSSliders')){
+    $slider = Mage::getModel('storepluginsetsliders/slider')->loadByCode('minimo_slider_full');
+    $slider2 = Mage::getModel('storepluginsetsliders/slider')->loadByCode('minimo_slider_wrapped');
+    
+    $style = Mage::getStoreConfig('mgthememinimo/main/colorslider');
+    if ( $style == 'blue'){
+        $color = 'blue';
+        $fontColor = '#1ea3da';
+    }elseif ($style == 'green') {
+        $color = 'green';
+        $fontColor = '#43bf8a';
+    }else {
+        $color = 'red';
+        $fontColor = '#f83e3e';
+    } 
+?>
+
+
+<?php $sliderStyle = Mage::getStoreConfig('mgthememinimo/main/slider');
+    if ( $sliderStyle == 'wrapped') { ?>
+        <?php if (!$slider2->isEmpty() && $slider2->getEnabled() && $slider2->isEnabledForCurrentStoreView()){ ?>
+            <div class="baners">
+                <div id="slider-wrapper-one">
+                    <section id="layerslider" class="slider" style="width:1200px; height:425px; max-width:1240px; padding:0 20px;" >
+                        <div class='slides'>
+                            <?php 
+                                foreach ($slider2->getEnabledBanners() as $banner){ ?>
+
+                                <div class='ls-slide' data-ls='slidedelay: 4000; transition2d: 2,7,9;'>
+                                <?php
+                                    echo '<img class="ls-bg" alt="Slide background" src="'.$banner->getFileUrl().'"/>';
+                                ?>
+                                <p class="ls-l" style="top:50%;left:50px;font-family:'GeogrotesqueSemiBold';font-size:84px;color:#ffffff;white-space:nowrap;text-transform:uppercase;text-align:left;text-shadow: 0 0 1px rgba(0,0,0,0.6);font-smooth: always;" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeOutElastic;rotatexin:-90;transformoriginin:50% top 0;offsetxout:-200;durationout:1000;">
+                                    <?php echo $banner->getTitle(); ?>
+                                </p>   
+                                <p class="ls-l" style="top:130px;left:50px;font-family:'GeogrotesqueUltraLight';font-size:29px;color:#fff;white-space:nowrap;text-transform:uppercase;text-align:left;text-shadow: 0 0 1px rgba(0,0,0,0.6);font-smooth: always;" data-ls="offsetxin:0;durationin:2000;delayin:2000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% top 0;offsetxout:-400;">
+                                    <?php $descSlide = $banner->getDescription();
+                                        if (strlen($descSlide) > 120){
+                                            $descSlide = substr($descSlide,0,120); 
+                                            $descSlideWrap = $descSlide."...";
+                                        }
+                                        else {
+                                            $descSlideWrap = $descSlide;
+                                        }
+                                    echo $descSlideWrap; ?>
+                                </p>
+
+                                <?php if ($banner->getUrlTitle()) { 
+                                    echo '<a style="top:80%;left:50px;font-family:GeogrotesqueSemiBold;font-size:29px;white-space:nowrap;padding:5px 17px;color:#fff;border:2px #fff solid;text-transform:uppercase;text-decoration:none;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;text-shadow: 0 0 1px rgba(0,0,0,0.6);font-smooth: always;" class="ls-l" href="'.$banner->getUrl().'">'.$banner->getUrlTitle().'<i class="fa fa-chevron-right" style="font-size:24px; padding-leftt:5px;"></i></a>';
+                                } ?>
+                                </div>
+                            <?php } ?>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        <?php } ?>
+    <?php }else { ?>
+    
+    <?php  if (!$slider->isEmpty() && $slider->getEnabled() && $slider->isEnabledForCurrentStoreView()){  ?>
+        <div id="full-slider-wrapper">
+            <div id="slider-full">
+                <div id="layerslider" style="width:100%;height:400px;">
+                    <?php foreach ($slider->getEnabledBanners() as $banner){ ?>
+                        <div class="ls-slide" data-ls="transition2d:1;">
+                            <img class="ls-l" style="top:0;left:70%;white-space:nowrap;" data-ls="offsetxin:400;durationin:2000;offsetxout:400;" src="<?php echo $banner->getFileUrl(); ?>" alt="">
+                            <p class="ls-l" style="top:50%;left:10px;font-family:'GeogrotesqueSemiBold';font-size:84px;color:#ffffff;white-space:nowrap;text-transform:uppercase;text-align:left;text-shadow: 0 0 1px rgba(0,0,0,0.6);font-smooth: always;" data-ls="offsetxin:0;durationin:2000;delayin:1500;easingin:easeOutElastic;rotatexin:-90;transformoriginin:50% top 0;offsetxout:-200;durationout:1000;">
+                                <?php echo $banner->getTitle(); ?>
+                            </p>
+                            <p class="ls-l" style="top:130px;left:10px;font-family:'GeogrotesqueUltraLight';font-size:29px;color:#fff;white-space:nowrap;text-transform:uppercase;text-align:left;text-shadow: 0 0 1px rgba(0,0,0,0.6);font-smooth: always;" data-ls="offsetxin:0;durationin:2000;delayin:2000;easingin:easeOutElastic;rotatexin:90;transformoriginin:50% top 0;offsetxout:-400;">
+                                <?php $descSlide = $banner->getDescription();
+                                    if (strlen($descSlide) > 120){
+                                        $descSlide = substr($descSlide,0,120); 
+                                        $descSlideWrap = $descSlide."...";
+                                    }
+                                    else {
+                                        $descSlideWrap = $descSlide;
+                                    }
+                                echo $descSlideWrap; ?>
+                            </p>
+                            <?php if ($banner->getUrlTitle()) { 
+                                echo '<a style="top:80%;left:10px;font-family:GeogrotesqueSemiBold;font-size:29px;white-space:nowrap;padding:5px 17px;color:#fff;border:2px #fff solid;text-transform:uppercase;text-decoration:none;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;text-shadow: 0 0 1px rgba(0,0,0,0.6);font-smooth: always;" class="ls-l" href="'.$banner->getUrl().'">'.$banner->getUrlTitle().'<i class="fa fa-chevron-right" style="font-size:24px; padding-left:5px;"></i></a>';
+                            } ?>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
+        </div>
+    <?php } ?>
+    <?php } ?>
+
+<?php } ?>

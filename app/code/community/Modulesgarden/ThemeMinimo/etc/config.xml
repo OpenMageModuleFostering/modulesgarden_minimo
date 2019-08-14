@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Modulesgarden_ThemeMinimo>
+            <version>1.0.0</version>
+        </Modulesgarden_ThemeMinimo>
+    </modules>
+
+    <global>
+        <models>
+            <mgthememinimo>
+                <class>Modulesgarden_ThemeMinimo_Model</class>
+                <resourceModel>mgthememinimo_resource</resourceModel>
+            </mgthememinimo>
+            <mgthememinimo_resource>
+                <class>Modulesgarden_ThemeMinimo_Model_Resource</class>
+            </mgthememinimo_resource>
+        </models>
+        <blocks>
+            <mgthememinimo>
+                <class>Modulesgarden_ThemeMinimo_Block</class>
+            </mgthememinimo>
+        </blocks>
+        <helpers>
+            <mgthememinimo>
+                <class>Modulesgarden_ThemeMinimo_Helper</class>
+            </mgthememinimo>
+        </helpers>
+        <resources>
+            <mgthememinimo_setup>
+                <setup>
+                    <module>Modulesgarden_ThemeMinimo</module>
+                    <class>Mage_Sales_Model_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </mgthememinimo_setup>
+            <mgthememinimo_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </mgthememinimo_write>
+            <mgthememinimo_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </mgthememinimo_read>
+        </resources>
+    </global>
+
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <mgthememinimo> <!-- the same as <sections> child name -->
+                                            <title>Modulesgarden Theme Minimo</title>
+                                        </mgthememinimo>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+    <default>
+        <mgthememinimo>
+            <main>
+                <colorscheme>pink</colorscheme>
+                <fontfamily>opensans</fontfamily>
+                <colorfooter>lightgray</colorfooter>
+                <breadcrumbs>yes</breadcrumbs>
+                <showhome>no</showhome>
+                <slider>full</slider>
+            </main>
+        </mgthememinimo>
+    </default>
+</config>

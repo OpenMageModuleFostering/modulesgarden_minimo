@@ -1,0 +1,30 @@
+/* ============ STYLES FOR FOOTER THEME - LIGHTGRAY =============== */
+.header_wrapp { background:#383a3c; border-bottom:1px solid #27292a; }
+.header .welcome-msg { margin:0; color:#fff; }
+.header .welcome-msg a { color:#fff; }
+.header .links li a { color:#fff; }
+.header .form-language select { background:#383a3c !important; }
+
+.footer-container { background:#383a3c; border-top:1px solid #27292a; border-bottom:1px solid #27292a; }
+.footer .store-switcher { display:inline; margin:0 5px 0 0; color:#fff; }
+.footer a { color:#ececec; text-decoration:none; }
+.footer a:hover { text-decoration:underline; }
+.footer .bugs { margin:13px 0 0; color:#ececec; }
+.footer .bugs a { color:#ececec; text-decoration:underline; }
+.footer .bugs a:hover { text-decoration:none; }
+.footer address { margin:0 0 20px; color:#ececec; }
+.footer address a { color:#ececec; text-decoration:underline; }
+.footer address a:hover { text-decoration:none; }
+.footer .col2 h2, .footer .col3 h2, .footer .col4 span { color:#fff !important; }
+.footer-container .col1 { background:#313132 !important; border:1px solid #27292a !important; }
+.col-footer h2 { border-bottom: 1px solid #27292a !important; }
+.col-footer .block-title { border-bottom: 1px solid #27292a !important; }
+.footer .col1 h2 { border:none !important; color:#fff; }
+.footer .col1 ul li { color:#ececec; }
+.block-subscribe label { color:#ececec !important; }
+.header .form-language label { color:#fff !important; }
+#search-lg { background: #383A3C; border-bottom: 1px solid #27292A; border-right: 1px solid #27292A; border-left: 1px solid #27292A; }
+.page > address { background:#313132; color:#ECECEC; }
+.col1.col-footer h2 { color:#fff !important; }
+.col-footer .block-subscribe .block-title span { border-bottom:1px solid #27292A !important; }
+.col-footer .block-subscribe .block-title { border:0 !important; }
