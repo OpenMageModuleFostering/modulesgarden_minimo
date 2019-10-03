@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Modulesgarden_Minimo",
+    "name": "openmage-module-fostering\/modulesgarden_minimo",
     "type": "magento-module",
-    "license": "OSL",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "ModulesGarden Minimo - Is A Responsive Skin Designed Under The Guidance Of Such Determinants As Minimalism, Austerity Of Form And Transparency.",
     "authors": [
